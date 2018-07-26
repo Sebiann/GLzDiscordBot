@@ -7,8 +7,10 @@ owner = '187239212544688128' #Use: if message.author.id == owner:
 admin = '439729155693740032' #Use: if admin in [role.id for role in message.author.roles]:
 
 Token = '' #Bot Token
-client = commands.Bot(command_prefix='z')
+client = commands.Bot(command_prefix = 'z')
 client.remove_command('help')
+
+extensions = ['main']
 
 #This will send the Message in the Console
 @client.event
@@ -17,20 +19,32 @@ async def on_ready():
 	print('Ready for Duty')
 	print(client.user.name)
 
-@client.command()
-async def ping():
-    await client.say('Pong!')
+@client.command
+async def load(extension):
+	try:
+		client.load_extension(extension)
+		print('Loaded {}'.format(extension))
+	except Exception as error:
+		print('{} cannot be loaded [{}]'.format(extension, error))
 
-@client.command()
-async def echo(*args):
-    output = ''
-    for word in args:
-        output += word
-        output += ' '
-    await client.say(output)
+@client.command
+async def unload(extension):
+	try:
+		client.unload_extension(extension)
+		print('Unloaded {}'.format(extension))
+	except Exception as error:
+		print('{} cannot be unloaded [{}]'.format(extension, error))
+
+if __name__ == '__main__':
+	for extensions in extensions:
+		try:
+			client.load_extensions(extension)
+		except Exception as error:
+			print('{} cannot be loaded [{}]'.format(extension, error))
 
 @client.command()
 async def help():
+
 	embed = discord.Embed(
 		colour = discord.Colour.orange()
 	)
@@ -38,7 +52,10 @@ async def help():
 	embed.set_author(name='Help')
 	embed.add_field(name='ping', value='Returns Pong!')
 	embed.add_field(name='echo (Insert Fart Joke here)', value='Returns what the User said')
-
+	embed.add_field(name='Im out', value='I forgot')
+	embed.add_field(name='Not a Command', value='Not a Command')
+	embed.add_field(name='Not a Command', value='Not a Command')
+	embed.add_field(name='Not a Command', value='Not a Command')
 
 	await client.say(embed=embed)
 
