@@ -7,7 +7,7 @@ owner = '187239212544688128' #Use: if message.author.id == owner:
 admin = '439729155693740032' #Use: if admin in [role.id for role in message.author.roles]:
 
 Token = '' #Bot Token
-client = commands.Bot(command_prefix = 'z')
+client = commands.Bot(command_prefix='z')
 client.remove_command('help')
 
 #This will send the Message in the Console
