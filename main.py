@@ -10,7 +10,7 @@ class Main:
         await self.client.say('Pong!')
 
     @commands.command()
-    async def echo(*args):
+    async def echo(self, *args):
         output = ''
         for word in args:
             output += word
