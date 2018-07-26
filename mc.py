@@ -9,12 +9,12 @@ class Mc:
         self.client = client
 
     @commands.command()
-    async def start(self)
+    async def start(self):
         subprocess.call("start.sh", shell=True)
         await self.client.say('Server Started')
 
     @commands.command()
-    async def stop(self)
+    async def stop(self):
         if message.author.id == owner:
             subprocess.call("stop.sh", shell=True)
             await self.client.say('Server Stoped')
