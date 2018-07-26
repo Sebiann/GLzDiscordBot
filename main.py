@@ -9,7 +9,7 @@ class Main:
     async def ping(self):
         await self.client.say('Pong!')
 
-    @client.command()
+    @commands.command()
     async def echo(*args):
         output = ''
         for word in args:
