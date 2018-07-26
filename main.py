@@ -15,7 +15,7 @@ class Main:
         for word in args:
             output += word
             output += ' '
-        await client.say(output)
+        await self.client.say(output)
 
 def setup(client):
     client.add_cog(Main(client))
