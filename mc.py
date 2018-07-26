@@ -3,6 +3,7 @@ import discord
 from discord.ext import commands
 
 owner = '187239212544688128' #Use: if message.author.id == owner:
+atlantic = '465504814155956225'
 
 class Mc:
     def __init__(self, client):
