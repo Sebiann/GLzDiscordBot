@@ -10,7 +10,7 @@ Token = '' #Bot Token
 client = commands.Bot(command_prefix = 'z')
 client.remove_command('help')
 
-extensions = ['main']
+extensions = ['main', 'mc']
 
 #This will send the Message in the Console
 @client.event
