@@ -7,7 +7,7 @@ class Mc:
         self.client = client
 
     @commands.command()
-    async def start(self)
+    async def start(self):
         subprocess.call("start.sh", shell=True)
         await self.client.say('Server Started')
 
