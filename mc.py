@@ -9,12 +9,13 @@ class Mc:
     def __init__(self, client):
         self.client = client
 
-    @commands.event
+    @commands.Bot.event
     async def on_message(message):
         if message.content.startswith('zstart') and any(role.name == name for role in message.author.roles):
             subprocess.call("start.sh", shell=True)
             await self.client.say('Server started')
         else:
             await self.client.say('Sorry No permissions')
+            
 def setup(client):
     client.add_cog(Mc(client))
