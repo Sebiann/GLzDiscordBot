@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 
 owner = '187239212544688128'
-atlantic = '465504814155956225'
+hope = '465504814155956225'
 
 class Mc:
     def __init__(self, client):
@@ -12,7 +12,7 @@ class Mc:
     @commands.command(pass_context=True)
     async def start(self, ctx):
         author = ctx.message.author
-        if (any(role.name == 'name' for role in author.roles)):
+        if (any(role.name == 'hope' for role in author.roles)):
             subprocess.call("start.sh", shell=True)
             await self.client.say('Server started')
         else:
