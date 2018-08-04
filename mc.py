@@ -9,7 +9,7 @@ class Mc:
     def __init__(self, client):
         self.client = client
 
-    @commands.command()
+    @commands.command(pass_context=True)
     async def start(self, ctx):
         author = ctx.message.author
         if (any(role.name == 'name' for role in author.roles)):
