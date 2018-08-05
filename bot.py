@@ -46,7 +46,7 @@ if __name__ == '__main__':
 async def help():
 
 	embed = discord.Embed(
-		colour = discord.Colour.orange()
+		color = discord.Color.orange()
 	)
 
 	embed.set_author(name='Help')

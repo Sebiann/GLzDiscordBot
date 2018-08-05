@@ -14,7 +14,9 @@ class Mc:
     async def start(self, ctx):
         author = ctx.message.author
         if author.id == alex:
-            subprocess.call("start.sh", shell=True)
+            em = discord.Embed(description="Something Something", color=0xff0000).set_author(name=ctx.message.author.name, icon_url=ctx.message.author.avatar_url).set_footer(text="Imagination")
+
+            subprocess.call("./start.sh", shell=True)
             await self.client.say('Server started')
         else:
             await self.client.say('Sorry no permissions')
@@ -23,7 +25,7 @@ class Mc:
 #    async def start(self, ctx):
 #        author = ctx.message.author
 #        if (any(role.id == hope for role in author.roles)):
-#            subprocess.call("start.sh", shell=True)
+#            subprocess.call("./start.sh", shell=True)
 #            await self.client.say('Server started')
 #        else:
 #            await self.client.say('Sorry no permissions')
