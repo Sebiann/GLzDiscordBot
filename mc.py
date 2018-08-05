@@ -15,9 +15,8 @@ class Mc:
         author = ctx.message.author
         if author.id == alex or author.id == owner:
             em = discord.Embed(description="Something Something", color=0xff0000).set_author(name=ctx.message.author.name, icon_url=ctx.message.author.avatar_url).set_footer(text="Imagination")
-
             subprocess.call("./start.sh", shell=True)
-            await self.client.say('Server started')
+            client.send_message(channel, embed=em)
         else:
             await self.client.say('Sorry no permissions')
 
