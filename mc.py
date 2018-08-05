@@ -12,7 +12,7 @@ class Mc:
     @commands.command(pass_context=True)
     async def start(self, ctx):
         author = ctx.message.author
-        if (any(role.name == 'hope' for role in author.roles)):
+        if (any(role.id == 'hope' for role in author.roles)):
             subprocess.call("start.sh", shell=True)
             await self.client.say('Server started')
         else:
