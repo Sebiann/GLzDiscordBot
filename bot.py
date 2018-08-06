@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
 @client.command()
 async def help():
-	em = discord.Embed(title="Help", description="Still Testing", color=0x992d22).add_field(name='ping', value='Returns Pong!').add_field(name='echo (Insert Fart Joke here)', value='Returns what the User said').set_footer(text="These only Work in #commands")
+	em = discord.Embed(title="Help", color=0x992d22).add_field(name='ping', value='Returns Pong!').add_field(name='echo (Insert Fart Joke here)', value='Returns what the User said').set_footer(text="These only Work in #commands")
 	await client.say(embed=em)
 
 client.run(Token)
