@@ -8,7 +8,7 @@ class Main:
     def __init__(self, client):
         self.client = client
 
-    @commands.command()
+    @commands.command(pass_context=True)
     async def ping(self, ctx):
         author = ctx.message.author
         channel = ctx.message.channel
@@ -17,8 +17,8 @@ class Main:
         else:
             pass
 
-    @commands.command()
-    async def echo(self, *args, ctx):
+    @commands.command(pass_context=True)
+    async def echo(self, ctx, *args):
         author = ctx.message.author
         channel = ctx.message.channel
         if channel.id == cmds or author.id == owner:
