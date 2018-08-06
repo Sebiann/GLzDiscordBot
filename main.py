@@ -15,6 +15,7 @@ class Main:
         if channel.id == cmds or author.id == owner:
             await self.client.say('Pong!')
         else:
+            pass
 
     @commands.command()
     async def echo(self, *args, ctx):
@@ -27,6 +28,7 @@ class Main:
                     output += ' '
                     await self.client.say(output)
             else:
+                pass
 
 def setup(client):
     client.add_cog(Main(client))
