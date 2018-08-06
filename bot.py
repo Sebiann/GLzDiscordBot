@@ -15,7 +15,7 @@ extensions = ['main', 'mc']
 #This will send the Message in the Console
 @client.event
 async def on_ready():
-	await client.change_presence(game=discord.Game(name='Testing', type=0))
+	await client.change_presence(game=discord.Game(name='GLz Bot', type=0))
 	print('Ready for Duty')
 	print(client.user.name)
 
@@ -44,19 +44,7 @@ if __name__ == '__main__':
 
 @client.command()
 async def help():
-
-	embed = discord.Embed(
-		color = discord.Color.orange()
-	)
-
-	embed.set_author(name='Help')
-	embed.add_field(name='ping', value='Returns Pong!')
-	embed.add_field(name='echo (Insert Fart Joke here)', value='Returns what the User said')
-	embed.add_field(name='Im out', value='I forgot')
-	embed.add_field(name='Not a Command', value='Not a Command')
-	embed.add_field(name='Not a Command', value='Not a Command')
-	embed.add_field(name='Not a Command', value='Not a Command')
-
-	await client.say(embed=embed)
+	em = discord.Embed(title="Help", description="Still Testing", color="dark_red").set_author(name="Help2", icon_url=ctx.message.author.avatar_url).add_field(name='ping', value='Returns Pong!').add_field(name='echo (Insert Fart Joke here)', value='Returns what the User said').set_footer(text="These only Work in ")
+	await client.say(embed=em)
 
 client.run(Token)
