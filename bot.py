@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
 @client.command()
 async def help():
-	em = discord.Embed(title="Help", description="Still Testing", color="dark_red").set_author(name="Help2", icon_url=ctx.message.author.avatar_url).add_field(name='ping', value='Returns Pong!').add_field(name='echo (Insert Fart Joke here)', value='Returns what the User said').set_footer(text="These only Work in ")
+	em = discord.Embed(title="Help", description="Still Testing", color=dark_red).set_author(name="Help2", icon_url=ctx.message.author.avatar_url).add_field(name='ping', value='Returns Pong!').add_field(name='echo (Insert Fart Joke here)', value='Returns what the User said').set_footer(text="These only Work in ")
 	await client.say(embed=em)
 
 client.run(Token)
