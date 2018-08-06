@@ -21,14 +21,14 @@ class Main:
     async def echo(self, *args, ctx):
         author = ctx.message.author
         channel = ctx.message.channel
-            if channel.id == cmds or author.id == owner:
-                output = ''
-                for word in args:
-                    output += word
-                    output += ' '
-                    await self.client.say(output)
-            else:
-                pass
+        if channel.id == cmds or author.id == owner:
+            output = ''
+            for word in args:
+                output += word
+                output += ' '
+                await self.client.say(output)
+        else:
+            pass
 
 def setup(client):
     client.add_cog(Main(client))
