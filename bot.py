@@ -48,9 +48,9 @@ async def help():
 	em = discord.Embed(title="Help", color=0x992d22).add_field(name='ping', value='Returns Pong!').add_field(name='echo (Insert Fart Joke here)', value='Returns what the User said').set_footer(text="These only Work in #commands")
 	await client.say(embed=em)
 
-@client.command()
-async def stop():
-	if message.author.id == owner:
+@client.command(pass_context=True)
+async def stop(ctx):
+	if ctx.message.author.id == owner:
 		sys.exit()
 	else:
 		await client.say('U are not the Owner')
