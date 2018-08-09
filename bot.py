@@ -6,12 +6,13 @@ from discord.ext import commands
 import random
 import sys
 
-Token = os.getenv('Token')
-owner = os.getenv('owner')
-admin = '439729155693740032'
 #Load the .env File
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
+
+Token = os.getenv('Token')
+owner = os.getenv('owner')
+admin = '439729155693740032'
 
 client = commands.Bot(command_prefix = 'z')
 client.remove_command('help')
