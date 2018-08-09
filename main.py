@@ -1,7 +1,14 @@
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
 import discord
 from discord.ext import commands
 
-owner = '187239212544688128'
+#Load the .env File
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+owner = os.getenv('owner')
 cmds = '424617816025464832'
 
 class Main:

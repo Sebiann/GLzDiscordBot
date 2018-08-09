@@ -1,8 +1,15 @@
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
 import subprocess
 import discord
 from discord.ext import commands
 
-owner = '187239212544688128'
+#Load the .env File
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
+
+owner = os.getenv('owner')
 hope = '465504814155956225'
 alex = '453613035387486232'
 

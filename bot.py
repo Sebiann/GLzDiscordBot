@@ -22,7 +22,7 @@ extensions = ['main', 'mc']
 #This will send the Message in the Console
 @client.event
 async def on_ready():
-	await client.change_presence(game=discord.Game(name='GLz Bot', type=0))
+	await client.change_presence(game=discord.Game(name=os.getenv('presence'), type=0))
 	print('Ready for Duty')
 	print(client.user.name)
 
