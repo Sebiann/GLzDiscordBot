@@ -13,4 +13,5 @@ U will need:
   Token='PASTE'
   owner='PASTE'
   prefix='PASTE'
+  presence='PASTE'
 ```
