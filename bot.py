@@ -1,14 +1,18 @@
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
 import discord
 from discord.ext import commands
 import random
 import sys
 
-#Permissions
-owner = '187239212544688128' #Use: if message.author.id == owner:
-admin = '439729155693740032' #Use: if admin in [role.id for role in message.author.roles]:
+Token = os.getenv('Token')
+owner = os.getenv('owner')
+admin = '439729155693740032'
+#Load the .env File
+dotenv_path = join(dirname(__file__), '.env')
+load_dotenv(dotenv_path)
 
-Token = '' #Bot Token
-client = commands.Bot(command_prefix = 'z')
 client.remove_command('help')
 
 extensions = ['main', 'mc']
