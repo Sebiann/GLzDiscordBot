@@ -13,7 +13,7 @@ admin = '439729155693740032'
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
-commands.Bot(command_prefix = 'z')
+client = commands.Bot(command_prefix = 'z')
 client.remove_command('help')
 
 extensions = ['main', 'mc']
