@@ -1,0 +1,3 @@
+MyApp
+discord.py
+python-dotenv
