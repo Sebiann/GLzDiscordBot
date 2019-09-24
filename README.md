@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/Sebiann/GLzDiscordBot.svg?branch=master)](https://travis-ci.com/Sebiann/GLzDiscordBot)
 # GLzDiscordBot
 
 This is a small custom Discord Bot i am Creating
